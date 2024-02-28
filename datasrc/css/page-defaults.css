@@ -1,0 +1,36 @@
+:root {
+    --cPalette-4: #222831;
+    --cPalette-3: #393E46;
+    --cPalette-2: #00ADB5;
+    --cPalette-1: #EEEEEE;
+
+    --cButtons-bg: rgb(212, 212, 212);
+    --cButtons-color: rgb(185, 185, 185);
+}
+
+html, body {
+    width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cPalette-1);
+}
+
+::-webkit-scrollbar {
+    width:0.2em;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: var(--cPalette-4);
+}

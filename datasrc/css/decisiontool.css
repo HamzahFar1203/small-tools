@@ -1,0 +1,99 @@
+.randomizer-flexbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    gap: 5px;
+    width: 100vw;
+    height: inherit;
+
+    padding: 20vh 0vh;
+    margin: 0px;
+
+    background-color: transparent;
+    font-family: 'Rubik', sans-serif;
+}
+
+.randomizer-items {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap:5px;
+}
+
+.randomizer-items > p {
+    color: var(--cPalette-3);
+    text-align: center;
+}
+
+.randomizer-items > p:first-child {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.answer-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 2em;
+    background-color: var(--cPalette-3);
+    border: 1px solid #818181;
+    border-radius: 1px;
+}
+
+.radio-buttons-container {
+    display: flex; 
+    flex-direction: row; 
+    gap: 1vw; 
+    justify-content: center;
+}
+
+.radio-buttons-container > .radio-buttons {
+    display: flex; 
+    color: var(--cPalette-3);
+    font-weight: bold;
+}
+
+textarea {
+    height: 8em;
+    padding: 0.2em 0.5em;
+
+    background-color: var(--cPalette-3);
+    border: 1px solid #818181;
+    color: white;
+    outline: 0;
+
+    transition: box-shadow 500ms;
+    resize: none;
+}
+
+textarea:focus {
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+button {
+    padding: 10px 0px;
+
+    color: var(--cButtons-color);
+    background-color: var(--cButtons-bg);
+    border: none;
+
+    cursor: pointer;
+    transition: background-color 500ms;
+}
+
+button:hover {
+    color: white;
+    background-color: var(--cPalette-3);
+}
+
+@media (max-width: 800px) {
+    .randomizer-items {
+        width: 80vw;
+    }
+}

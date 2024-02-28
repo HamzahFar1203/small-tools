@@ -1,0 +1,110 @@
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 20vh 0px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.flexbox-container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    background-color: transparent;
+}
+
+.flexbox-container > div > input {
+    padding: 5px 5px 5px 5px;
+
+    color: white;
+    background-color: var(--cPalette-3);
+    border: 1px solid #818181;
+    outline: transparent;
+
+    transition: box-shadow 500ms;
+}
+
+.flexbox-container > div > input:focus {
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.flexbox-container > div > p:first-child {
+    font-size: 25px;
+    font-weight: bold; 
+    text-align: center;
+}
+
+.flexbox-container > div > p {
+    color: var(--cPalette-3);
+}
+
+button {
+    padding: 10px 0px;
+
+    color: var(--cButtons-color);
+    background-color: var(--cButtons-bg);
+    border: none;
+
+    cursor: pointer;
+    transition: background-color 500ms;
+}
+
+button:hover {
+    background-color: var(--cPalette-3);
+    color: white;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #818181;
+    background-color: #4950577e;
+
+    transition: background-color 1000ms;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+  
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .flexbox-container > div {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .flexbox-container > div {
+        width: 40%;
+    }
+}
+
+@media (max-width: 991px) {
+    .flexbox-container > div {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    .flexbox-container > div {
+        width: 85%;
+    }
+}

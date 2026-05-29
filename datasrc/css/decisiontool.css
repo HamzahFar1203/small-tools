@@ -61,6 +61,7 @@
 
 textarea {
     height: 8em;
+    width: 100%;
     padding: 0.2em 0.5em;
 
     background-color: var(--cPalette-3);

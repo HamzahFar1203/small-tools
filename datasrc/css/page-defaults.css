@@ -8,13 +8,61 @@
     --cButtons-color: rgb(185, 185, 185);
 }
 
-html, body {
-    width: 100vw;
-    max-height: 100vh;
-    overflow-x: hidden;
+html, body, main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
     margin: 0;
     padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background-color: var(--cPalette-4);
+    background-image: radial-gradient(#005f64 15%, transparent 16%);
+    background-size: 20px 20px;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    width: 80%;
+    height: fit-content;
+
+    margin: 0;
+    padding: 0;
+
+    border-radius: 30px;
+    font-family: 'Rubik', sans-serif;
+    color: white;
     background-color: var(--cPalette-1);
+}
+
+header {
+    padding: 15px 0 0 0;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--cPalette-3);
+}
+
+header svg {
+    height: 35px;
+
+    transition: all 500ms;
+}
+
+header svg:hover {
+    color: var(--cPalette-4);
 }
 
 ::-webkit-scrollbar {
@@ -32,5 +80,7 @@ html, body {
 }
 
 footer {
-    background-color: var(--cPalette-4);
+    padding: 10px;
+
+    color: var(--cPalette-3);
 }

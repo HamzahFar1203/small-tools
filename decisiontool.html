@@ -38,16 +38,9 @@
 
                     <form>
 
-                        <!-- Radio Buttons -->
-                        <fieldset class="radio-buttons-container">
-                            <div class="radio-buttons">
-                                <label for="suspense" class="pe-2">Suspense</label>
-                                <input type="radio" id="suspense" name="randomizerType" value="Suspense" />
-                            </div>
-                            <div class="radio-buttons">
-                                <label for="regular" class="pe-2">Regular</label>
-                                <input type="radio" id="regular" name="randomizerType" value="Regular" />
-                            </div>
+                        <fieldset class="buttons_container">
+                            <input type="button" id="suspense" name="suspense-button" value="Suspense" />
+                            <input type="button" id="regular" name="regular-button" value="Regular" />
                         </fieldset>
 
                         <!-- TextArea where user enters their input -->
@@ -56,7 +49,7 @@
                     </form>
 
                     <!-- Submit button -->
-                    <button onclick="decisionController()">Pick</button>
+                    <button id="submit-button" onclick="decisionController()">Pick</button>
 
                     <p style="margin-top: 1em;">Whether you're stuck on what to eat, or where to go, or maybe you're playing a game with your family/friends and want to pick who goes first, the decision tool is the perfect solution for your problem. <br><br>
                     There are two modes: suspense, and regular. Regular gives you an answer immediately, suspense is well... suspenseful, try it for yourself.</p>

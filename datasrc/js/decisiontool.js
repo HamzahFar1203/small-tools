@@ -1,34 +1,52 @@
-var answerBox = document.getElementsByClassName("answer-block");
-var answerBoxText = document.querySelector(".answer-block > p")
-var inputBox = document.querySelector("textarea");
-var suspenseBtn = document.querySelector("#suspense");
-var regularBtn = document.querySelector("#regular");
-var submitBtn = document.querySelector("button");
+// HTML Elements
+const answerBox = document.getElementsByClassName("answer-block");
+const answerBoxText = document.querySelector(".answer-block > p")
+const inputBox = document.querySelector("textarea");
+const suspense_button = document.querySelector("#suspense");
+const regular_button = document.querySelector("#regular");
+const submit_button = document.querySelector("#submit-button");
+
+// Variables
+var decision_type = "";
 
 function decisionController() {
-    if (suspenseBtn.checked && inputBox.value) {
+    if (decision_type === "suspense" && inputBox.value) {
 
-        var audio = new Audio(`./datasrc/sfx/suspenseWithpartyhorn.mp3`);
+        let audio = new Audio(`./datasrc/sfx/suspenseWithpartyhorn.mp3`);
         audio.play();
-        submitBtn.disabled = true;
+        submit_button.disabled = true;
         answerBoxText.textContent = "Suspensing...";
 
         setTimeout(function () {
             decisionMaker("suspense");
-            submitBtn.disabled = false;
+            submit_button.disabled = false;
         }, 5400);
 
-    } else if(regularBtn.checked) {
+    } else if(decision_type === "regular") {
 
         decisionMaker();
 
     }
 } 
 
+suspense_button.addEventListener("click", () => {
+    decision_type = "suspense";
+
+    suspense_button.classList.add("blue-background"); 
+    regular_button.classList.remove("blue-background");
+});
+
+regular_button.addEventListener("click", () => {
+    decision_type = "regular";
+
+    regular_button.classList.add("blue-background");
+    suspense_button.classList.remove("blue-background");
+});
+
 function decisionMaker (type) {
 
-    var options = inputBox.value.split(", ");
-    var randomIndex = Math.floor(Math.random() * options.length);
+    let options = inputBox.value.split(", ");
+    let randomIndex = Math.floor(Math.random() * options.length);
 
     if (type == "suspense") {
         answerBoxText.textContent = `🎉${options[randomIndex].toUpperCase()}🎉`;

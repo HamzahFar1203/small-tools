@@ -1,8 +1,8 @@
 .randomizer-items {
     display: flex;
     flex-direction: column;
+
     width: 50vw;
-    gap:5px;
 }
 
 .randomizer-items > p {
@@ -11,9 +11,10 @@
 }
 
 .randomizer-items > p:first-child {
+    margin: 0;
+
     font-size: 25px;
     font-weight: bold;
-    margin: 0;
 }
 
 .answer-block {
@@ -21,27 +22,36 @@
     justify-content: center;
     align-items: center;
 
-    height: 2em;
+    height: 2.5em;
 
     text-align: center;
     color: white;
 
+    border-radius: 10px 10px 0 0;
     background-color: var(--cPalette-3);
-    border: 1px solid #818181;
-    border-radius: 10px;
 }
 
-.radio-buttons-container {
-    display: flex; 
-    flex-direction: row; 
-    gap: 1vw; 
-    justify-content: center;
+.buttons_container {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
 }
 
-.radio-buttons-container > .radio-buttons {
-    display: flex; 
-    color: var(--cPalette-3);
-    font-weight: bold;
+.buttons_container input {
+    width: 50%;
+
+    padding: 5px 0 5px 0;
+
+    border: 0;
+    border-top: 1px solid rgb(102, 102, 102);
+    border-bottom: 1px solid rgb(102, 102, 102);
+    background-color: var(--cPalette-3);
+    transition: all 500ms;
+}
+
+.buttons_container input:hover {
+    background-color: var(--cPalette-2);
 }
 
 textarea {
@@ -50,20 +60,19 @@ textarea {
     padding: 0.4em 0.7em;
 
     background-color: var(--cPalette-3);
-    border: 1px solid #818181;
     color: white;
-    outline: 0;
-    border-radius: 20px;
+    border: none;
+    border-radius: 0px 0px 20px 20px;
 
     transition: all 500ms;
     resize: none;
 }
 
 textarea:focus {
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
-button {
+#submit-button {
     padding: 10px 0px;
 
     color: var(--cButtons-color);
@@ -75,12 +84,27 @@ button {
     transition: all 500ms;
 }
 
-button:hover {
+#submit-button:hover {
     color: white;
     background-color: var(--cPalette-3);
     border-radius: 10px;
 }
 
+/* 
+
+    MODULAR CLASSES
+
+*/
+.blue-background {
+    background-color: var(--cPalette-2) !important;
+}
+
+
+/* 
+
+    MEDIA QUERIES 
+    
+*/
 @media (max-width: 800px) {
     .randomizer-items {
         width: 80%;

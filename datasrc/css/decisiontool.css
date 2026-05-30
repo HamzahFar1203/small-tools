@@ -51,7 +51,7 @@
 }
 
 .buttons_container input:hover {
-    background-color: var(--cPalette-2);
+    background-color: var(--cPalette-4);
 }
 
 textarea {
@@ -70,6 +70,7 @@ textarea {
 
 textarea:focus {
     border-radius: 0 0 10px 10px;
+    outline: none;
 }
 
 #submit-button {
@@ -95,8 +96,26 @@ textarea:focus {
     MODULAR CLASSES
 
 */
-.blue-background {
-    background-color: var(--cPalette-2) !important;
+.selected {
+    background-color: var(--cPalette-4) !important;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+  
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
@@ -107,6 +126,6 @@ textarea:focus {
 */
 @media (max-width: 800px) {
     .randomizer-items {
-        width: 80%;
+        width: 85%;
     }
 }

@@ -32,15 +32,15 @@ function decisionController() {
 suspense_button.addEventListener("click", () => {
     decision_type = "suspense";
 
-    suspense_button.classList.add("blue-background"); 
-    regular_button.classList.remove("blue-background");
+    suspense_button.classList.add("selected"); 
+    regular_button.classList.remove("selected");
 });
 
 regular_button.addEventListener("click", () => {
     decision_type = "regular";
 
-    regular_button.classList.add("blue-background");
-    suspense_button.classList.remove("blue-background");
+    regular_button.classList.add("selected");
+    suspense_button.classList.remove("selected");
 });
 
 function decisionMaker (type) {
